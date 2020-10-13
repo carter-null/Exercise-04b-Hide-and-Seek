@@ -14,3 +14,4 @@ func _physics_process(_delta):
 		player.position = starting_position
 		add_child(player)
 		player.get_node("Camera2D").current = true
+

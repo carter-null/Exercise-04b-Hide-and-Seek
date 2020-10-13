@@ -30,6 +30,7 @@ func _physics_process(_delta):
 	if direction > 0 and $AnimatedSprite.flip_h: $AnimatedSprite.flip_h = false
 	Backup.position = position
 
+
 		
 
 func is_moving():
@@ -54,3 +55,11 @@ func set_animation(anim):
 func die():
 	Backup.current = true
 	queue_free()
+
+
+
+
+
+
+func _on_Area2D_area_entered(area):
+	die()
